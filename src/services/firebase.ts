@@ -11,8 +11,7 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID || 'placeholder',
 };
 
-// Check if we have at least the API Key to attempt initialization
-const isFirebaseConfigured = !!import.meta.env.VITE_FIREBASE_API_KEY;
+const isFirebaseConfigured = !!import.meta.env.VITE_FIREBASE_API_KEY && import.meta.env.VITE_FIREBASE_API_KEY !== 'placeholder';
 
 let app;
 try {
